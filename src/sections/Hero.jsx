@@ -9,6 +9,11 @@ import {
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
+// Dynamic relative imports to ensure assets deploy properly to production
+import heroPng from "../assets/hero.png";
+import profilePng from "../assets/profile.png";
+import resumePdf from "../assets/Resume.pdf";
+
 const skills = [
   "Python",
   "JavaScript",
@@ -42,7 +47,7 @@ export const Hero = () => {
       {/* Bg */}
       <div className="absolute inset-0">
         <img
-          src="src/assets/hero.png"
+          src={heroPng}
           alt="Hero image"
           className="w-full h-full object-cover opacity-40"
         />
@@ -53,6 +58,7 @@ export const Hero = () => {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(30)].map((_, i) => (
           <div
+            key={i}
             className="absolute w-1.5 h-1.5 rounded-full opacity-60"
             style={{
               backgroundColor: "#20B2A6",
@@ -98,15 +104,13 @@ export const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-
-              {/* ✅ ONLY CHANGE HERE */}
               <a href="#contact">
                 <Button size="lg">
                   Contact Me <ArrowRight className="w-5 h-5" />
                 </Button>
               </a>
 
-              <a href="/src/assets/Resume.pdf" download>
+              <a href={resumePdf} download>
                 <AnimatedBorderButton>
                   <Download className="w-5 h-5" />
                   Download CV
@@ -144,7 +148,7 @@ export const Hero = () => {
               />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="/profile.png"
+                  src={profilePng}
                   alt="Wan Muhammad Danish Fakhri Bin Suhaimi"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />

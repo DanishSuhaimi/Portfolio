@@ -1,11 +1,16 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
+
+// Dynamic imports to prevent 404 errors on GitHub Pages
+import uwellnessPng from "../assets/uwellness.png";
+import courtplayPng from "../assets/courtplay.png";
+
 const projects = [
   {
     title: "U-Wellness: Data Visualization of Mental Health Trends Among University Students",
     description:
       "Developed an interactive data visualization dashboard to analyze mental health trends among university students using open-source datasets.",
-    image: "/src/assets/uwellness.png",
+    image: uwellnessPng, // Passed as imported reference variable
     tags: ["Power BI", "Python", "Data Cleaning", "Visualization"],
     link: "https://app.powerbi.com/view?r=eyJrIjoiYzc1MWRkMWEtYjM1ZC00MDQzLTk0NjctZjI5NzEzYTZjMzI3IiwidCI6ImNkY2JiMGUyLTlmZWEtNGY1NC04NjcwLTY3MjcwNzc5N2FkYSIsImMiOjEwfQ%3D%3D&pageName=498450969c59c33398d0",
     github: "https://github.com/DanishSuhaimi",
@@ -14,7 +19,7 @@ const projects = [
     title: "CourtPlay: Sports Booking System",
     description:
       "Developed a mobile application that makes booking sports venues quick and convenient. Users can check court availability in real time, book badminton, futsal or pickleball courts instantly and navigate to venues using GPS integration.",
-    image: "src/assets/courtplay.png",
+    image: courtplayPng, // Passed as imported reference variable
     tags: ["Android Studio", "Firebase", "JavaScript"],
     link: "https://github.com/DanishSuhaimi/ICT602-Group-Project",
     github: "https://github.com/DanishSuhaimi",

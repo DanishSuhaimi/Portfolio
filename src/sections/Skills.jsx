@@ -1,6 +1,12 @@
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useState } from "react";
 
+// Dynamic imports to prevent 404 errors in production
+import programmingPng from "../assets/programming.png";
+import databasePng from "../assets/database.png";
+import analyticsPng from "../assets/analytics.png";
+import toolsPng from "../assets/tools.png";
+
 const skills = [
   {
     quote: (
@@ -12,7 +18,7 @@ const skills = [
     ),
     author: "Programming Languages",
     role: "Core Development Skills",
-    avatar: "src/assets/programming.png",
+    avatar: programmingPng, // Use imported module reference
   },
   {
     quote: (
@@ -22,7 +28,7 @@ const skills = [
     ),
     author: "Databases",
     role: "Data Storage & Management",
-    avatar: "src/assets/database.png",
+    avatar: databasePng, // Use imported module reference
   },
   {
     quote: (
@@ -34,7 +40,7 @@ const skills = [
     ),
     author: "Data Analytics & Visualization",
     role: "Analytical Visualization",
-    avatar: "src/assets/analytics.png",
+    avatar: analyticsPng, // Use imported module reference
   },
   {
     quote: (
@@ -46,7 +52,7 @@ const skills = [
     ),
     author: "Tools & Platforms",
     role: "Development Tools",
-    avatar: "src/assets/tools.png",
+    avatar: toolsPng, // Use imported module reference
   },
 ];
 
