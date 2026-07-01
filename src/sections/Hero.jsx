@@ -144,7 +144,7 @@ export const Hero = () => {
               />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="/src/assets/profile.png"
+                  src="/profile.png"
                   alt="Wan Muhammad Danish Fakhri Bin Suhaimi"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
